@@ -5,5 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
-    <body></body>
+    <body>
+        <form action="" id="fake-form" novalidate>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" minlength="8" required>
+                <span class="error-email" aria-live="polite"></span>
+            </p>
+            <p>
+                <label for="country">Country: </label>
+                <input type="text" name="country" id="country" minlength="4" required>
+                <span class="error-country" aria-live="polite"></span>
+            </p>
+            <p>
+                <label for="zip-code">Zip Code: </label>
+                <input type="text" name="zip-code" id="zip-code" minlength="5" maxlength="5" pattern="^[0-9]*$" required>
+                <span class="error-zip-code" aria-live="polite"></span>
+            </p>
+            <p>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" minlength="5" maxlength="20" required>
+                <span class="error-password" aria-live="polite"></span>
+            </p>
+            <p>
+                <label for="password-confirmation">Password Confirmation: </label>
+                <input type="password" name="password-confirmation" id="password-confirmation" minlength="5" maxlength="20" required>
+                <span class="error-password-confirmation" aria-live="polite"></span>
+            </p>
+            <p>
+                <button>Send Form</button>
+                <span class="error-form"></span>
+            </p>
+        </form>
+    </body>
 </html>

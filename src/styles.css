@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+form {
+    width: 60%;
+    border: 1px solid black;
+    box-shadow: -10px -10px 5px rgb(0, 0, 0, .35);
+    padding: 20px;
+}
+
+form > p {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.error { 
+    color: rgb(255, 26, 26);
+}
+
+input:valid {
+    background-color:  rgb(51, 255, 153, .5);
+    border: none;
+}
+
+input:invalid:focus {
+    color: white;
+    background-color: rgb(255, 26, 26, .5);
+    border: none;
+}
+
+button { 
+    padding: 5px 10px;
+    border: none;
+}
+
+form:has(input:invalid) button{
+    background-color: rgb(255, 26, 26, .5);
+}
